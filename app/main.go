@@ -1,13 +1,19 @@
 package main
 
 import (
-	"log"
+	"log/slog"
+	"os"
 	"time"
 )
 
 func main() {
+	// Create a logger with INFO level
+	logger := slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
+		Level: slog.LevelInfo,
+	}))
+
 	for {
-		log.Println("Helllo, World!")
+		logger.Info("Application start up")
 		time.Sleep(1 * time.Second)
 	}
 }
