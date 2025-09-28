@@ -7,7 +7,7 @@ import (
 
 func main() {
 	for {
-		log.Println("Helllo, This is from the application start up.")
+		log.Println("Hello, application startup.")
 		time.Sleep(1 * time.Second)
 	}
 }
