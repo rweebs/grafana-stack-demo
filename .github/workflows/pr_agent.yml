@@ -27,7 +27,7 @@ jobs:
           # Azure OpenAI configuration
           OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
           OPENAI_API_TYPE: "azure"
-          OPENAI_API_VERSION: "2025-01-01-preview"
+          OPENAI_API_VERSION: "2024-12-01-preview"
           OPENAI_API_BASE: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
           OPENAI_DEPLOYMENT_ID: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
 
