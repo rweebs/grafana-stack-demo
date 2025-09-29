@@ -26,9 +26,9 @@ jobs:
 
           # Azure OpenAI configuration
           OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
-          OPENAI_API_TYPE: "azure"
-          OPENAI_API_VERSION: "2024-12-01-preview"
-          OPENAI_API_BASE: "https://supeapp-azure-ai.openai.azure.com"
+          OPENAI.API_TYPE: "azure"
+          OPENAI.API_VERSION: "2024-12-01-preview"
+          OPENAI.API_BASE: "https://supeapp-azure-ai.openai.azure.com"
           OPENAI.DEPLOYMENT_ID: "gpt-4o"
 
           # Model configuration
