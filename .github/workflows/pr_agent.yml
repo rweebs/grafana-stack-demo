@@ -29,11 +29,11 @@ jobs:
           OPENAI_API_TYPE: "azure"
           OPENAI_API_VERSION: "2024-10-21"
           OPENAI_API_BASE: "https://supeapp-azure-ai.openai.azure.com"
-          OPENAI_DEPLOYMENT_ID: "o4-mini"
+          OPENAI_DEPLOYMENT_ID: "gpt-4.1"
 
           # Model configuration
-          config.model: "o4-mini"
-          config.fallback_models: '["o4-mini"]'
+          config.model: "gpt-4.1"
+          config.fallback_models: '["gpt-4.1"]'
 
           # PR Agent behavior
           github_action_config.auto_review: "true"
