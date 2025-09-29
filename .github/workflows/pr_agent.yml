@@ -32,10 +32,10 @@ jobs:
           OPENAI_DEPLOYMENT_ID: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
 
           # Model configuration
-          CONFIG_MODEL: "gpt-4.1"
-          CONFIG_FALLBACK_MODELS: '["gpt-4.1"]'
+          config.model: "gpt-4.1"
+          config.fallback_models: '["gpt-4.1"]'
 
           # PR Agent behavior
-          GITHUB_ACTION_CONFIG_AUTO_REVIEW: "true"
-          GITHUB_ACTION_CONFIG_AUTO_DESCRIBE: "true"
-          GITHUB_ACTION_CONFIG_AUTO_IMPROVE: "true"
+          github_action_config.auto_review: "true"
+          github_action_config.auto_describe: "true"
+          github_action_config.auto_improve: "true"
