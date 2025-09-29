@@ -14,6 +14,6 @@ func main() {
 
 	for {
 		logger.Info("Application start up")
-		time.Sleep(1 * time.Second)
+		time.Sleep(2 * time.Second)
 	}
 }
