@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Run PR Agent
         id: pragent
-        uses: qodo-ai/pr-agent@v0.6.0 # 🔒 Pin version for stability
+        uses: qodo-ai/pr-agent@main # 🔒 Pin version for stability
         continue-on-error: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
