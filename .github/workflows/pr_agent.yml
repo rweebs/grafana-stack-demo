@@ -28,7 +28,7 @@ jobs:
           OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
           OPENAI_API_TYPE: "azure"
           OPENAI_API_VERSION: "2025-01-01-preview"
-          OPENAI_API_BASE: "https://supeapp-azure-ai.openai.azure.com"
+          OPENAI_API_BASE: "https://supeapp-azure-ai.openai.azure.com/"
           OPENAI_DEPLOYMENT_ID: "gpt-4.1"
 
           # Model configuration
