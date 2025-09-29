@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Run PR Agent
         id: pragent
-        uses: docker://codiumai/pr-agent:0.23-github_action # 🔒 Pin version for stability
+        uses: qodo-ai/pr-agent@main # 🔒 Pin version for stability
         continue-on-error: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -27,16 +27,13 @@ jobs:
           # Azure OpenAI configuration
           OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
           OPENAI_API_TYPE: "azure"
-          OPENAI_API_VERSION: "2024-10-21"
+          OPENAI_API_VERSION: "2024-12-01-preview"
           OPENAI_API_BASE: "https://supeapp-azure-ai.openai.azure.com"
           OPENAI_DEPLOYMENT_ID: "gpt-4o"
 
           # Model configuration
           config.model: "gpt-4o"
           config.fallback_models: '["gpt-4o"]'
-
-          CONFIG_MODEL: "gpt-4o"
-          CONFIG_FALLBACK_MODELS: '["gpt-4o"]'
 
           # PR Agent behavior
           github_action_config.auto_review: "true"
