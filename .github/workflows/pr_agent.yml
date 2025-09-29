@@ -15,6 +15,18 @@ jobs:
       - name: PR Agent action step
         id: pragent
         uses: qodo-ai/pr-agent@main
-        env:
-          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Azure OpenAI configuration
+        OPENAI.API_TYPE: "azure"
+        OPENAI.API_VERSION: "2025-04-14"
+        OPENAI.API_BASE: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+        OPENAI.DEPLOYMENT_ID: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
+        # Set the model to match your Azure deployment
+        config.model: "gpt-4.1"
+        config.fallback_models: '["gpt-4.1"]'
+        # Tool configuration
+        github_action_config.auto_review: "true"
+        github_action_config.auto_describe: "true"
+        github_action_config.auto_improve: "true"
